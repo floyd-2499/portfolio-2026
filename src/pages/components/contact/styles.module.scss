@@ -1,0 +1,192 @@
+@use "../../../styles/variables.scss" as var;
+
+.section-main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var.$primary-color;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+    scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  .section-background-container {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin: auto;
+    background-color: var.$primary-color;
+    z-index: -1;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    user-select: none;
+
+    .backgrond-text-1,
+    .backgrond-text-2 {
+      width: 100%;
+      padding: 0vw 2vw;
+      box-sizing: border-box;
+      text-align: start;
+      font-size: 35vh;
+      font-weight: 600;
+      line-height: 40vh;
+      color: var.$white;
+      opacity: 0.14;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .backgrond-text-1 {
+      -webkit-text-stroke: 2px var.$white;
+      color: var.$primary-color;
+    }
+  }
+
+  .section-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-width: 1450px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+    color: var.$white;
+
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    &-contents {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: row;
+      gap: 50px;
+      margin: auto;
+      padding: 25px 0px;
+      box-sizing: border-box;
+
+      .contact-form-section {
+        width: 40%;
+        height: 100%;
+        padding: 30px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: var.$faded-primary;
+        opacity: 0.9;
+        overflow-y: auto;
+        position: relative;
+
+        &::-webkit-scrollbar {
+          width: 5px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px grey;
+          border-radius: 10px;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: var.$secondary-color;
+          border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          background: var.$secondary-color;
+        }
+
+        &-header {
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 40px;
+        }
+
+        .contact-form{
+          width: 100%;
+          height: fit-content;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          gap: 30px;
+
+          input, textarea{
+            height: 50px;
+            width: 100%;
+            max-width: 100%;
+            max-height: 300px;
+            min-height: 50px;
+            padding: 15px 10px;
+            box-sizing: border-box;
+            border: 2px solid var.$white;
+            outline: none;
+            color: var.$white;
+            border-radius: 4px;
+            background-color: transparent;
+            font-size: 14px;
+
+            &::placeholder {
+              color: var.$white;
+              
+            }
+          }
+
+          textarea {
+            height: 150px;
+            resize: vertical;
+          }
+
+          button {
+            width: 100%;
+            height: 50px;
+            padding: 15px 20px;
+            box-sizing: border-box;
+            background-color: var.$primary-color;
+            color: var.$white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+             transition: background-color 0.3s ease;
+             font-weight: 600;
+            }
+
+             &:hover button {
+              background-color: var.$secondary-color;
+              color: var.$primary-color;
+            }
+        }
+      }
+
+      .contact-card-section {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 20px;
+
+      }
+    }
+  }
+}
