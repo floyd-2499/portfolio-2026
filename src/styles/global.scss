@@ -5,15 +5,14 @@ body {
   overflow-y: auto;
   padding: 0 !important;
   margin: 0 !important;
-    scroll-behavior: smooth !important;
-    scroll-snap-type: y proximity;
-
+  scroll-behavior: smooth !important;
+  scroll-snap-type: y proximity;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
