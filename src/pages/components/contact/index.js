@@ -3,6 +3,9 @@ import Image from "next/image";
 import styles from "./styles.module.scss";
 import { useState } from "react";
 
+import visitCardFront from "../../../assets/profile/visit-card-front.png";
+import visitCardBack from "../../../assets/profile/visit-card-back.png";
+
 const ContactSection = () => {
 
   const [name, setName] = useState("");
@@ -29,7 +32,12 @@ const ContactSection = () => {
             </div>
           </div>
           <div className={styles["contact-card-section"]}>
-            Images
+            <div className={styles["visit-card"]}>
+              <Image src={visitCardFront} alt="Visit Card Front" width={400} height={250} />  
+            </div>
+            <div className={styles["visit-card"]}>
+              <Image src={visitCardBack} alt="Visit Card Back" width={400} height={250} />  
+            </div>
           </div>
         </div>
       </div>

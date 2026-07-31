@@ -9,6 +9,7 @@
   z-index: 0;
   color: var.$primary-color;
   overflow: hidden;
+  z-index: 0;
 
   .background-container {
     position: absolute;
@@ -29,6 +30,7 @@
       text-align: start;
       font-size: 1.2vw;
       font-weight: 600;
+      margin-bottom: 20px;
     }
 
     .backgrond-text-2 {
@@ -45,6 +47,7 @@
       text-align: end;
       font-size: 1.12vw;
       font-weight: 500;
+      margin-top: 20px;
     }
   }
 
@@ -59,42 +62,123 @@
     justify-content: center;
     padding: 0px 20px;
     box-sizing: border-box;
+    z-index: 0;
 
     .hero-image-main {
-        height: 90vh;
+      height: 90vh;
+      width: auto;
+      z-index: 0;
+
+      img {
+        height: 100%;
         width: auto;
 
-        img {
-            height: 100%;
-            width: auto;
-        }
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+
+        animation: fadeReveal 1s ease forwards;
+        animation-delay: 1.5s;
+      }
+    }
+
+    @keyframes fadeReveal {
+      0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.98);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
 
     .experience-wrapper {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-direction: column ;   
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 20px;
+      z-index: 1;
 
-        .wrapper-row-1 {
-            font-size: 1.5vw;
-        }
+      .wrapper-row-1 {
+        font-size: 4vh;
+      }
 
-        .wrapper-row-2 {
-            margin-top: -5px;
-            font-size: 0.8vw;
-            padding-left: 1vw;
-            box-sizing: border-box;
-        }
+      .wrapper-row-2 {
+        margin-top: -5px;
+        font-size: 2vh;
+      }
     }
 
     .social-media-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        gap: 20px;
-        font-size: 1.5vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 20px;
+      font-size: 3vh;
+      margin-bottom: 20px;
+      z-index: 1;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .background-container {
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 40vh;
+      box-sizing: border-box;
+      
+      .backgrond-text-1, .backgrond-text-3  {
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .backgrond-text-1 {
+        margin-bottom: -10px;
+      }
+
+      .backgrond-text-2 {
+        font-size: 30vw;
+      }
+
+      .backgrond-text-3  {
+        margin-top: 10vh;
+      }
+    }
+
+    .hero-main-contents {
+      .hero-image-main {
+        max-height: 80vh;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .background-container {
+      padding-top: 15vh;
+      box-sizing: border-box;
+    }
+  }
+
+  @media (max-width: 1050px) {
+    .hero-main-contents {
+      position: relative;
+
+      .social-media-wrapper {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        flex-direction: column;
+      }
+
+      .experience-wrapper {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        width: fit-content;
+      }
     }
   }
 }
