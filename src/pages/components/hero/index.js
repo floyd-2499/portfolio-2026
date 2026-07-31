@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 import profile from "../../../assets/profile/profile.png";
 import Link from "next/link";
 
-const socialMediaContents = [
+export const socialMediaContents = [
   {
     key: 1,
     name: "Github",

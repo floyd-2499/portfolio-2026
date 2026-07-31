@@ -6,6 +6,7 @@ import SkillsSection from "./components/skills";
 import ExperienceSection from "./components/experience";
 import ProjectsSection from "./components/projects";
 import ContactSection from "./components/contact";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <ExperienceSection />
       <ProjectsSection />
       <ContactSection />
+      <Footer />
     </>
   );
 }

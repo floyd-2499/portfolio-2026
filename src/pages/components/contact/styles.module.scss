@@ -2,32 +2,35 @@
 
 .section-main {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var.$primary-color;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   z-index: 0;
-    scroll-snap-align: start;
+  scroll-snap-align: start;
   scroll-snap-stop: always;
+  background-color: var.$primary-color;
 
   .section-background-container {
     position: absolute;
     top: 0;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
     margin: auto;
-    background-color: var.$primary-color;
     z-index: -1;
-    padding: 10px 0px;
+    padding-top: 30px;
     box-sizing: border-box;
     user-select: none;
+    overflow-y: hidden;
 
     .backgrond-text-1,
     .backgrond-text-2 {
@@ -51,11 +54,9 @@
   }
 
   .section-container {
-    position: absolute;
-    top: 0;
     width: 100%;
     max-width: 1450px;
-    height: 100%;
+    height: fit-content;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -74,9 +75,10 @@
       height: 100%;
       width: 100%;
       display: flex;
-      align-items: center;
-      justify-content: flex-start;
+      align-items: flex-end;
+      justify-content: flex-end;
       flex-direction: row;
+      flex-wrap: wrap-reverse;
       gap: 50px;
       margin: auto;
       padding: 25px 0px;
@@ -84,7 +86,13 @@
 
       .contact-form-section {
         width: 40%;
+        min-width: 250px;
         height: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
         padding: 30px;
         box-sizing: border-box;
         border-radius: 10px;
@@ -117,19 +125,20 @@
         &-header {
           font-size: 24px;
           font-weight: 600;
-          margin-bottom: 40px;
+          margin-bottom: 30px;
         }
 
-        .contact-form{
+        .contact-form {
           width: 100%;
           height: fit-content;
           display: flex;
           align-items: flex-start;
           justify-content: center;
           flex-direction: column;
-          gap: 30px;
+          gap: 20px;
 
-          input, textarea{
+          input,
+          textarea {
             height: 50px;
             width: 100%;
             max-width: 100%;
@@ -146,7 +155,6 @@
 
             &::placeholder {
               color: var.$white;
-              
             }
           }
 
@@ -166,26 +174,36 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 14px;
-             transition: background-color 0.3s ease;
-             font-weight: 600;
-            }
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+          }
 
-             &:hover button {
-              background-color: var.$secondary-color;
-              color: var.$primary-color;
-            }
+          &:hover button {
+            background-color: var.$secondary-color;
+            color: var.$primary-color;
+          }
         }
       }
 
       .contact-card-section {
         width: 25%;
+        min-width: 250px;
         height: 100%;
+        flex: 1;
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
         gap: 20px;
 
+        .visit-card {
+          width: 100%;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
       }
     }
   }

@@ -6,11 +6,6 @@ import { FaPlay } from "react-icons/fa";
 const ProjectsSection = () => {
   return (
     <div className={styles["section-main"]} id="experience">
-      <div className={styles["section-background-container"]}>
-        <div className={styles["backgrond-text-1"]}>projects</div>
-        <div className={styles["backgrond-text-2"]}>projects</div>
-      </div>
-
       <div className={styles["section-container"]}>
         <div className={styles["section-container-contents"]}>
           {ProjectsData?.map((project) => {
@@ -28,6 +23,10 @@ const ProjectsSection = () => {
             );
           })}
         </div>
+      </div>
+      <div className={styles["section-background-container"]}>
+        <div className={styles["backgrond-text-1"]}>projects</div>
+        <div className={styles["backgrond-text-2"]}>projects</div>
       </div>
     </div>
   );

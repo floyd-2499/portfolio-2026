@@ -8,7 +8,7 @@ import { FaBars } from "react-icons/fa";
 import { FaX, FaXmark } from "react-icons/fa6";
 
 
-const menuData = [
+export const menuData = [
   { key: 1, name: "Home", id: "#home" },
   { key: 2, name: "Skills", id: "#skills" },
   { key: 3, name: "Experience", id: "#experience" },
