@@ -1,11 +1,11 @@
-import countrymusic from "../../../assets/projects/countrymusic.png"
-import medic from "../../../assets/projects/medic.png"
-import souzaunitedexports from "../../../assets/projects/souzaunitedexports.png"
-import thesmarthub from "../../../assets/projects/thesmarthub.png"
-import travelvlog from "../../../assets/projects/travelvlog.png"
-import portfolio from "../../../assets/projects/portfolio.png"
+import countrymusic from "../assets/projects/countrymusic.png"
+import medic from "../assets/projects/medic.png"
+import souzaunitedexports from "../assets/projects/souzaunitedexports.png"
+import thesmarthub from "../assets/projects/thesmarthub.png"
+import travelvlog from "../assets/projects/travelvlog.png"
+import portfolio from "../assets/projects/portfolio.png"
 
-const ProjectsData = [
+ export const projectData = [
     {
         id: 1,
         name: "Medic +",
@@ -55,5 +55,3 @@ const ProjectsData = [
         github: "https://github.com/floyd-2499/portfolio-remastered"
     },
 ]
-
-export default ProjectsData

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import styles from "./styles.module.scss";
-import skillSets from "./data";
+import { skillSets } from "../../../project-data/skills-data";
 
 const defaultTab = skillSets[1];
 

@@ -1,8 +1,8 @@
-import ESGDSLogo from "../../../assets/company/esgds.png"
-import AiTRADELogo from "../../../assets/company/ai-trade.png"
-import BobyanLogo from "../../../assets/company/bobyan.png"
+import ESGDSLogo from "../assets/company/esgds.png"
+import AiTRADELogo from "../assets/company/aitrade.png"
+import BobyanLogo from "../assets/company/bobyan.png"
 
-const ExperiencesData = [
+export const experiencesData = [
     {
     key: 3,
     companyName: "Bobyan Delivery",
@@ -59,11 +59,9 @@ const ExperiencesData = [
   },
 ];
 
-export const CareerHighlights = [
+export const careerHighlights = [
   "3+ years of professional development experience",
   "Upgraded projects from React 14 to 18, ensuring modern features and stability",
   "Designed & built platforms from scratch including wireframe & UI designs in Figma",
   "Led migration initiatives to improve performance and scalability"
 ];
-
-export default ExperiencesData

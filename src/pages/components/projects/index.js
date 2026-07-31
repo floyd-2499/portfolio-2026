@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ProjectsData from "./data";
+import { projectData } from "../../../project-data/project-data";
 import styles from "./styles.module.scss";
 import { FaPlay } from "react-icons/fa";
 
@@ -8,7 +8,7 @@ const ProjectsSection = () => {
     <div className={styles["section-main"]} id="experience">
       <div className={styles["section-container"]}>
         <div className={styles["section-container-contents"]}>
-          {ProjectsData?.map((project) => {
+          {projectData?.map((project) => {
             return (
               <div className={styles["project-card"]} key={project?.id}>
                 <Image alt={project?.name} src={project?.image} />

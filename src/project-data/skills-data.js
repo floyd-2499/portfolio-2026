@@ -3,7 +3,7 @@ import { BsTools } from "react-icons/bs";
 import { FaCode } from "react-icons/fa";
 import { RiBrushAiFill } from "react-icons/ri";
 
-const skillSets = [
+export const skillSets = [
     {
         key: 1,
         category: "UI/UX Design",
@@ -189,5 +189,3 @@ const skillSets = [
         ]
     },
 ]
-
-export default skillSets

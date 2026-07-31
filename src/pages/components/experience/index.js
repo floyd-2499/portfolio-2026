@@ -4,10 +4,10 @@ import { useState } from "react";
 import { FaAward, FaExternalLinkAlt, FaMugHot } from "react-icons/fa";
 
 import styles from "./styles.module.scss";
-import ExperiencesData, { CareerHighlights } from "./data";
+import { careerHighlights, experiencesData } from "../../../project-data/experience-data";
 
 const ExperienceSection = () => {
-  const [activeTab, setActiveTab] = useState(ExperiencesData[0]);
+  const [activeTab, setActiveTab] = useState(experiencesData[0]);
 
   const handleChangeTab = ({ selectedTab }) => {
     setActiveTab(selectedTab);
@@ -59,7 +59,7 @@ const ExperienceSection = () => {
                 Companies
               </div>
               <div className={styles["company-options"]}>
-                {ExperiencesData?.map((company) => {
+                {experiencesData?.map((company) => {
                   return (
                     <div
                       className={`${styles["company-option-card"]} ${
@@ -87,7 +87,7 @@ const ExperienceSection = () => {
                 Career Highlights
               </div>
               <div className={styles["highlights-content"]}>
-                {CareerHighlights?.map((item, index) => {
+                {careerHighlights?.map((item, index) => {
                   return (
                     <li
                       className={styles["highlights-content-line"]}
