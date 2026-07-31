@@ -38,9 +38,9 @@ const SkillsSection = () => {
           })}
         </div>
         <div className={styles["active-tab-contents"]}>
-          {activeTabcontent?.map((skill) => {
+          {activeTabcontent?.map((skill, index) => {
             return (
-              <div key={skill?.key} className={styles["active-tab-item"]}>
+              <div key={skill?.key} className={styles["active-tab-item"]} style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className={styles["item-top-row"]}>
                   <div className={styles["item-title"]}>{skill?.name}</div>
                   <div className={styles["item-percentage"]}>{skill?.percent}%</div>

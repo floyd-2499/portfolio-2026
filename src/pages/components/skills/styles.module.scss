@@ -12,7 +12,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 0;
-      background-color: var.$primary-color;
+  background-color: var.$primary-color;
 
   .section-background-container {
     position: sticky;
@@ -129,6 +129,16 @@
         box-sizing: border-box;
         background-color: var.$faded-primary;
         border-radius: 10px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeUp 0.6s ease forwards;
+
+        @keyframes fadeUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
         .item-top-row {
           width: 100%;
@@ -137,11 +147,11 @@
           justify-content: space-between;
           flex-wrap: wrap;
           gap: 20px;
-          
+
           .item-title {
             font-size: 18px;
           }
-          
+
           .item-percentage {
             font-weight: 600;
           }
@@ -153,7 +163,7 @@
           height: 4px;
           border-radius: 10px;
           background-color: var.$white;
-          
+
           .progress-bar {
             height: 100%;
             background-color: var.$secondary-color;
@@ -161,7 +171,6 @@
           }
         }
       }
-
     }
   }
 }

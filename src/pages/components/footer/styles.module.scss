@@ -22,68 +22,75 @@
     flex-wrap: wrap;
 
     .footer-left {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-        gap: 5px;
-        flex: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: 5px;
+      flex: 1;
 
-        &-main-text {
-            font-size: 20px;
-            
-            .smiley {
-                margin-bottom: -5px;
-            }
-        }
+      &-main-text {
+        font-size: 20px;
 
-        &-logo {
-            width: 40px;
-            height: auto;
-            margin: 20px 0px;
-            box-sizing: border-box;
+        .smiley {
+          margin-bottom: -5px;
         }
+      }
+
+      &-logo {
+        width: 40px;
+        height: auto;
+        margin: 20px 0px;
+        box-sizing: border-box;
+      }
     }
 
-    .footer-mid, .footer-right {
-        display: flex;
-        flex: 1;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px 0px;
-        box-sizing: border-box;
+    .footer-mid,
+    .footer-right {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px 0px;
+      box-sizing: border-box;
 
-        .page-links{
-            cursor: pointer;
-    
-            &:hover {
-                font-weight: 600;
-            }
+      .page-links {
+        cursor: pointer;
+
+        &:hover {
+          font-weight: 600;
         }
+      }
     }
 
     .footer-right {
-        align-items: flex-end;
+      align-items: flex-end;
 
-        .media-icons {
-            font-size: 20px;
-        }
+      .media-icons {
+        font-size: 20px;
+      }
     }
   }
 
   @media (max-width: 600px) {
-.footer-top {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center ;
-    gap: 30px;
-    text-align: center;
+    .footer-top {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      text-align: center;
 
-     .footer-left {
+      .footer-left {
         align-items: center;
-     }
-}
+      }
+
+      .footer-right {
+        .media-icons {
+          font-size: 26px;
+        }
+      }
+    }
   }
 }
