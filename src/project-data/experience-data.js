@@ -4,25 +4,7 @@ import BobyanLogo from "../assets/company/bobyan.png"
 
 export const experiencesData = [
   {
-    key: 3,
-    companyName: "Bobyan Delivery",
-    role: "Supervisor",
-    tenure: "November 2025 - Present",
-    url: "https://www.esgds.io/",
-    logo: BobyanLogo,
-    points: [
-      "Operations for 725+ Talabat & Keeta riders",
-      "Rider support, scheduling & performance tracking",
-      "Cash reconciliation & financial reporting",
-      "Daily operations monitoring & issue resolution",
-      "Rider hiring, onboarding & coordination",
-      "Excel reports & performance analysis",
-      "Website development & social media management",
-      "IT support & technical troubleshooting",
-    ],
-  },
-  {
-    key: 2,
+    key: 1,
     companyName: "ESG Data Solutions",
     role: "Product Engineer",
     tenure: "May 2023 - June 2025",
@@ -43,7 +25,7 @@ export const experiencesData = [
     ],
   },
   {
-    key: 1,
+    key: 2,
     companyName: "AI Trade Inc",
     role: "Software Engineer",
     tenure: "Dec 2021 - Dec 2022",
@@ -57,6 +39,24 @@ export const experiencesData = [
       "Optimized SEO with static generation & metadata",
       "Developed cross-platform apps using Capacitor.js & Electron.js",
       "Wrote unit tests with Jest to improve code reliability",
+    ],
+  },
+  {
+    key: 3,
+    companyName: "Bobyan Delivery",
+    role: "Supervisor",
+    tenure: "November 2025 - Present",
+    url: "https://www.esgds.io/",
+    logo: BobyanLogo,
+    points: [
+      "Operations for 725+ Talabat & Keeta riders",
+      "Rider support, scheduling & performance tracking",
+      "Cash reconciliation & financial reporting",
+      "Daily operations monitoring & issue resolution",
+      "Rider hiring, onboarding & coordination",
+      "Excel reports & performance analysis",
+      "Website development & social media management",
+      "IT support & technical troubleshooting",
     ],
   },
 ];

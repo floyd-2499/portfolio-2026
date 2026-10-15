@@ -36,7 +36,7 @@ const HeroSectionMain = () => {
           Floyd
         </div>
         <div className={styles["backgrond-text-3"]}>
-          Web developer & UI/UX Designer
+          Frontend Developer & UI/UX Designer
         </div>
       </div>
       <div className={styles["hero-main-contents"]}>
