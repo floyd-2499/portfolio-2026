@@ -30,7 +30,8 @@
     padding-top: 30px;
     box-sizing: border-box;
     user-select: none;
-    overflow-y: hidden;
+    overflow: hidden;
+    opacity: 0.2;
 
     .backgrond-text-1,
     .backgrond-text-2 {
@@ -38,7 +39,7 @@
       padding: 0vw 2vw;
       box-sizing: border-box;
       text-align: start;
-      font-size: 35vh;
+      font-size: 32vh;
       font-weight: 600;
       line-height: 40vh;
       color: var.$white;
@@ -207,6 +208,7 @@
       }
 
       .company-options-section {
+        height: 100%;
         width: 25%;
         flex: 1;
         min-width: 250px;
@@ -219,7 +221,7 @@
 
         .mini-section {
           width: 100%;
-          height: fit-content;
+          height: 100%;
           display: flex;
           align-items: flex-start;
           justify-content: flex-start;

@@ -106,12 +106,6 @@ export const skillSets = [
                 percent: 90,
                 description: "Mobile-first design using breakpoints & Tailwind"
             },
-            {
-                key: 2.9,
-                name: "Framer Motion",
-                percent: 90,
-                description: "Smooth animations and transitions in React apps"
-            },
         ]
     },
     {

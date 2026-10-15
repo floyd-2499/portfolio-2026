@@ -2,6 +2,7 @@ import Image from "next/image";
 import { projectData } from "../../../project-data/project-data";
 import styles from "./styles.module.scss";
 import { FaPlay } from "react-icons/fa";
+import Link from "next/link";
 
 const ProjectsSection = () => {
   return (
@@ -13,7 +14,7 @@ const ProjectsSection = () => {
               <div className={styles["project-card"]} key={project?.id}>
                 <Image alt={project?.name} src={project?.image} />
                 <div className={styles["project-details-section"]}>
-                  <div className={styles["redirection-button"]}><FaPlay /></div>
+                  <Link href={project?.url} target="_blank" className={styles["redirection-button"]}><FaPlay /></Link>
                   <div className={styles["project-name"]}>{project?.name}</div>
                   <div className={styles["project-description"]}>
                     {project?.description}

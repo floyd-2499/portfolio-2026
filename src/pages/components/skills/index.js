@@ -43,7 +43,7 @@ const SkillsSection = () => {
               <div key={skill?.key} className={styles["active-tab-item"]} style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className={styles["item-top-row"]}>
                   <div className={styles["item-title"]}>{skill?.name}</div>
-                  <div className={styles["item-percentage"]}>{skill?.percent}%</div>
+                  {/* <div className={styles["item-percentage"]}>{skill?.percent}%</div> */}
                 </div>
                 <div className={styles["progress-container"]}><div className={styles["progress-bar"]} style={{width: `${skill?.percent}%`}} /></div>
                 <div className={styles["item-description"]}>{skill?.description}</div>
