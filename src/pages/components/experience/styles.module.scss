@@ -90,7 +90,8 @@
       .company-details-section {
         width: 75%;
         min-width: 250px;
-        flex: 1;
+        min-height: 80vh;
+        flex: 2;
         height: 100%;
         padding: 30px;
         box-sizing: border-box;
@@ -196,12 +197,15 @@
             align-items: flex-start;
             justify-content: flex-start;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
             padding: 20px 0px 0px 20px;
             box-sizing: border-box;
 
             .highlights-content-line {
               width: 100%;
+              font-size: 14px;
+              line-height: 20px;
+              opacity: 0.9;
             }
           }
         }
@@ -289,9 +293,11 @@
             align-items: flex-start;
             justify-content: flex-start;
             flex-direction: column;
-            gap: 5px;
+            gap: 15px;
             padding-left: 10px;
             box-sizing: border-box;
+            font-size: 14px;
+            line-height: 20px;
             opacity: 0.8;
           }
         }

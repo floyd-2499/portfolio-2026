@@ -5,6 +5,7 @@ import { FaAward, FaExternalLinkAlt, FaMugHot } from "react-icons/fa";
 
 import styles from "./styles.module.scss";
 import { careerHighlights, experiencesData } from "../../../project-data/experience-data";
+import Link from "next/link";
 
 const ExperienceSection = () => {
   const [activeTab, setActiveTab] = useState(experiencesData[0]);
@@ -30,9 +31,9 @@ const ExperienceSection = () => {
                 <div className={styles["designation"]}>{activeTab?.role}</div>
                 <div className={styles["tenure"]}>{activeTab?.tenure}</div>
               </div>
-              <div className={styles["company-link-button"]}>
+              <Link href={activeTab?.url} target="_blank" className={styles["company-link-button"]}>
                 <FaExternalLinkAlt /> Visit Company
-              </div>
+              </Link>
             </div>
             <div className={styles["work-details-section"]}>
               <div className={styles["work-detail-header"]}>
