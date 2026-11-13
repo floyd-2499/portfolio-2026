@@ -14,7 +14,6 @@
   box-sizing: border-box;
   overflow: hidden;
   color: var.$primary-color;
-  z-index: 10;
 
   .logo-section {
     width: auto;
@@ -96,6 +95,7 @@
     position: fixed;
     top: 0;
     height: 60px;
+    z-index: 1;
     background-color: var.$white;
   }
 }

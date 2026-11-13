@@ -2,9 +2,6 @@
 export default async function handler(req, res) {
   const scriptUrl = process.env.GOOGLE_SCRIPT_URL;
 
-  console.log(scriptUrl, "Yoooo");
-
-
   if (req.method !== "POST") {
     return res.status(405).json({
       success: false,
@@ -69,7 +66,6 @@ export default async function handler(req, res) {
       message: "Your message has been sent successfully!",
     });
   } catch (error) {
-    console.error("Contact form error:", error);
 
     return res.status(502).json({
       success: false,

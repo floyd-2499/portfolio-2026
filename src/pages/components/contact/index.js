@@ -67,9 +67,6 @@ const ContactSection = () => {
     }
   }, [response])
 
-  console.log(response);
-  
-
   return (
     <div className={styles["section-main"]} id="contact">
       <div className={styles["section-background-container"]}>

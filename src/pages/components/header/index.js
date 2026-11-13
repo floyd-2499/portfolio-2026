@@ -5,7 +5,7 @@ import Link from "next/link";
 import styles from "./styles.module.scss";
 import logo from "../../../assets/logo/logo-dark.svg";
 import { FaBars } from "react-icons/fa";
-import { FaX, FaXmark } from "react-icons/fa6";
+import { FaXmark } from "react-icons/fa6";
 
 
 export const menuData = [

@@ -1,0 +1,134 @@
+@use "../../../../styles/variables.scss" as var;
+
+.project-modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #44444450;
+  z-index: 10;
+
+  &-container {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #ffffff;
+    overflow: hidden;
+
+    .modal-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 25px;
+
+      &-text {
+        font-size: 26px;
+        font-weight: 600;
+        color: var.$primary-color;
+      }
+
+      .close-icon {
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+
+    .modal-body {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 20px;
+      overflow: hidden;
+
+      &-details {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 25px;
+
+        .description-set {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-direction: column;
+          gap: 5px;
+
+          &-title {
+            border-bottom: 2px dashed var.$primary-color;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            font-weight: 600;
+          }
+
+          &-content {
+            line-height: 25px;
+          }
+        }
+
+        .redirect-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          color: var.$white;
+          background-color: var.$primary-color;
+          padding: 10px 25px;
+          box-sizing: border-box;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: var.$faded-primary;
+          }
+        }
+      }
+
+      &-image {
+        width: 50%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .project-modal {
+    &-container {
+      padding-bottom: 100px;
+
+      .modal-body {
+        flex-direction: column-reverse;
+        overflow: scroll;
+
+        &-details {
+          width: 100%;
+          height: auto;
+
+          .redirect-button {
+            margin: 20px auto;
+          }
+        }
+
+        &-image {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
