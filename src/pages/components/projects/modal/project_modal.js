@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "./styles.module.scss"
-import { FaXmark } from "react-icons/fa6"
-import { HiOutlineExternalLink } from "react-icons/hi";
+import { FaRightLong, FaXmark } from "react-icons/fa6"
 
 import Link from "next/link";
 
@@ -27,7 +26,7 @@ const ProjectModal = ({ projectDetails, setSelectedProject }) => {
                                 <div className={styles["description-set-content"]}>{detail?.content}</div>
                             </div>
                         ))}
-                        <Link href={projectDetails?.url} target="_blank" className={styles["redirect-button"]}>Visit Site <HiOutlineExternalLink /> </Link>
+                        <Link href={projectDetails?.url} target="_blank" className={styles["redirect-button"]}>Visit Site <FaRightLong /> </Link>
                     </div>
                     <Image alt={projectDetails?.name} src={projectDetails?.image} className={styles["modal-body-image"]} />
                 </div>
