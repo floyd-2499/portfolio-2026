@@ -1,7 +1,8 @@
 import Image from "next/image";
 
 import styles from "./styles.module.scss"
-import { FaXmark } from "react-icons/fa6"
+import { FaArrowRightLong, FaXmark } from "react-icons/fa6"
+import { FaArrowRight } from "react-icons/fa";
 
 const ProjectModal = ({ projectDetails, setSelectedProject }) => {
 
@@ -31,8 +32,9 @@ const ProjectModal = ({ projectDetails, setSelectedProject }) => {
                             rel="noopener noreferrer"
                             className={styles["redirect-button"]}
                         >
-                            Visit Site
-                        </a>                    </div>
+                            Visit Site <FaArrowRightLong />
+                        </a>
+                    </div>
                     <Image alt={projectDetails?.name} src={projectDetails?.image} className={styles["modal-body-image"]} />
                 </div>
             </div>
