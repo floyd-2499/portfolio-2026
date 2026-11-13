@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import visitCardFront from "../../../assets/profile/visit-card-front.png";
 import visitCardBack from "../../../assets/profile/visit-card-back.png";
+import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa";
 
 
 const ContactSection = () => {
@@ -62,8 +63,8 @@ const ContactSection = () => {
   };
 
   useEffect(() => {
-    if(response){
-      setTimeout(() => {setResponse(null)}, 3000)
+    if (response) {
+      setTimeout(() => { setResponse(null) }, 3000)
     }
   }, [response])
 
@@ -79,8 +80,9 @@ const ContactSection = () => {
           <div className={styles["contact-form-section"]}>
             {response ? (
               <div className={styles["contact-request-message"]}>
+                {response?.success ? (<FaCheckCircle className={styles["contact-request-icon-sccess"]} />) : (<FaExclamationCircle  className={styles["contact-request-icon-error"]} />)}
                 {response?.message}
-            </div>) : (
+              </div>) : (
               <>
                 <div className={styles["contact-form-section-header"]}>
                   GET IN TOUCH
