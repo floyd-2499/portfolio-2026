@@ -1,8 +1,10 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+
 import styles from "./styles.module.scss"
 import { FaRightLong, FaXmark } from "react-icons/fa6"
-
-import Link from "next/link";
 
 const ProjectModal = ({ projectDetails, setSelectedProject }) => {
 
