@@ -22,11 +22,11 @@ const ProjectModal = ({ projectDetails, setSelectedProject }) => {
                     <div className={styles["modal-body-details"]}>
                         {projectDetails?.details?.map((detail) => (
                             <div className={styles["description-set"]} key={detail?.key}>
-                                <div className={styles["description-set-title"]}>{detail?.title} : </div>
+                                <div className={styles["description-set-title"]}>{detail?.title}</div>
                                 <div className={styles["description-set-content"]}>{detail?.content}</div>
                             </div>
                         ))}
-                        <Link href={projectDetails?.url} target="_blank" className={styles["redirect-button"]}>Visit Site</Link>
+                        {/* <Link href={projectDetails?.url} target="_blank" className={styles["redirect-button"]}>Visit Site</Link> */}
                     </div>
                     <Image alt={projectDetails?.name} src={projectDetails?.image} className={styles["modal-body-image"]} />
                 </div>
