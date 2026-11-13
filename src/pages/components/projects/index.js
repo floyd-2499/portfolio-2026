@@ -4,7 +4,7 @@ import { FaPlay } from "react-icons/fa";
 import styles from "./styles.module.scss";
 import { projectData } from "../../../project-data/project-data";
 import { useState } from "react";
-import ProjectModal from "./modal";
+import ProjectModal from "./modal/project_modal";
 
 const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState(null)
@@ -14,7 +14,7 @@ const ProjectsSection = () => {
   }
 
   return (
-    <div className={styles["section-main"]} id="experience">
+    <div className={styles["section-main"]} id="projects">
       {selectedProject ? (<ProjectModal projectDetails={selectedProject} setSelectedProject={setSelectedProject} />) : null}
       <div className={styles["section-container"]}>
         <div className={styles["section-container-contents"]}>

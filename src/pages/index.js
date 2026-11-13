@@ -4,7 +4,7 @@ import HeaderMain from "./components/header";
 import HeroSectionMain from "./components/hero";
 import SkillsSection from "./components/skills";
 import ExperienceSection from "./components/experience";
-import ProjectsSection from "./components/projects/project-modal";
+import ProjectsSection from "./components/projects";
 import ContactSection from "./components/contact";
 import Footer from "./components/footer";
 import Link from "next/link";
